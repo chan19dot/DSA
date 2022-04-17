@@ -1,5 +1,7 @@
 package dsa;
 
+
+
 public class Array10 {
 	/*
 	 * 
@@ -25,7 +27,25 @@ Do this in O(N) time.
 				res+=input[i];
 			}
 		}
-		System.out.println(res);		
+		System.out.println(res);
+		//use this when the array given is not sorted
+		byte b=0b0;
+		byte c =(byte) Math.pow(2,1);
+		for(int i: input) {
+			b= (byte) (b|b<<i|(byte)Math.pow(2, i-1));
+		}
+		
+		String s = Integer.toBinaryString(b);
+		int sres=s.length()+1;
+		for(int i=s.length()-1;i>=0;i--) {
+			if (s.charAt(i)=='0') {
+				sres=i;
+				break;
+			}
+		}
+		System.out.print(sres);
+		}
+	}
 
-}
-}
+		
+

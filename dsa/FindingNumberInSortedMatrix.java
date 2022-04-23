@@ -22,10 +22,10 @@ public class FindingNumberInSortedMatrix {
 			}
 			if(array[row][column]>number) {
 				column--;
-				//System.out.printf("column=%d\n",column);
+				System.out.printf("column=%d\n",column);
 			}
 			else {
-				//System.out.printf("row=%d\n",row);
+				System.out.printf("row=%d\n",row);
 				row++;
 			}
 		}
